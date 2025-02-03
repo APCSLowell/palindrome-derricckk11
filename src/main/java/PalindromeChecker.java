@@ -35,9 +35,58 @@ public void tester()
     }
   }
 }
+
+public String noSpaces(String sWord){
+  
+ String noSpaces = new String();
+ 
+ for(int i = 0; i < sWord.length(); i++){
+   
+   if(sWord.substring(i, i + 1).equals(" ")){ 
+     
+     
+     
+   } else {
+     
+     noSpaces += sWord.substring(i, i + 1);
+      
+   }
+   
+ }
+ 
+ return noSpaces; 
+
+}
+
+public String onlyLetters(String sString){
+  
+  String onlyLetters = new String();
+  
+  for(int i = 0; i < sString.length(); i++){
+    
+    if(Character.isLetter(sString.charAt(i))) {
+      
+      onlyLetters += sString.charAt(i); 
+    
+    }
+  }
+  
+  return onlyLetters; 
+}
+
+
+public String noCapitals(String sWord){
+  
+  return sWord.toLowerCase(); 
+  
+}
+
+  
+  
 public boolean palindrome(String word)
 {
   String reverse = new String();
+  word = noSpaces((noCapitals(onlyLetters(word)))); 
   
   for(int i = word.length(); i > 0; i--){
     
